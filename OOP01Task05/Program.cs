@@ -1,5 +1,6 @@
 ﻿using C_BasicsTask04;
 using System.Drawing;
+using System.Reflection;
 
 namespace OOP01Task05
 {
@@ -17,7 +18,17 @@ namespace OOP01Task05
             Console.WriteLine(book01.Genre);
             #endregion
 
+            #region Question02
+            /// 5-Using the Genre enum above, print the underlying int value of Genre.Fiction,
+            /// Genre.NonFiction, and Genre.Science by casting each to int.
+            /// 
 
+            Console.WriteLine((int)Genre.Fiction); 
+            Console.WriteLine((int)Genre.NonFiction);
+            Console.WriteLine((int)Genre.Science);
+
+
+            #endregion
             // Pause screen execution
             Console.ReadLine();
         }
