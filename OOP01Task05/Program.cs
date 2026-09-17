@@ -12,6 +12,8 @@ namespace OOP01Task05
             #region Question01
             /// 4-Declare an enum Genre { Fiction, NonFiction, Science }. 
             /// Add a Genre  property to Book,  assign it Genre.Science, and print it.  
+            Console.WriteLine("Question01 : ");
+            /// 
             Book book01 = new Book();
             book01.Genre = Genre.Science;  
 
@@ -22,6 +24,7 @@ namespace OOP01Task05
             /// 5-Using the Genre enum above, print the underlying int value of Genre.Fiction,
             /// Genre.NonFiction, and Genre.Science by casting each to int.
             /// 
+            Console.WriteLine("\nQuestion02 : ");
 
             Console.WriteLine((int)Genre.Fiction); 
             Console.WriteLine((int)Genre.NonFiction);
@@ -31,17 +34,29 @@ namespace OOP01Task05
 
             #region Question03
             /// 6-Given int genreNumber = 1;, cast it into a Genre value and print the result.  
-           
-            int genreNumber = 1;
+            Console.WriteLine("\nQuestion03 : ");
 
+            int genreNumber = 1;
             Genre genreName = (Genre)genreNumber;
-            Console.WriteLine(genreName); 
+            Console.WriteLine(genreName);
             //Console.WriteLine((Genre)genreNumber);
+
+            #endregion
+
+            #region Question04
+            ///   7 - Given string genreText = "Science";, convert it into a Genre value using Enum.Parse() and print the result. 
+            ///
+            Console.WriteLine("\nQuestion04 : ");
+
+            string genreText = "Science";
+            Genre value = (Genre) Enum.Parse(typeof(Genre), genreText );
+            Console.WriteLine(value); 
 
             #endregion
 
             // Pause screen execution
             Console.ReadLine();
+
         }
     }
 }
