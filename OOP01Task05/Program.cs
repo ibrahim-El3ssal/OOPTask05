@@ -27,8 +27,19 @@ namespace OOP01Task05
             Console.WriteLine((int)Genre.NonFiction);
             Console.WriteLine((int)Genre.Science);
 
+            #endregion
+
+            #region Question03
+            /// 6-Given int genreNumber = 1;, cast it into a Genre value and print the result.  
+           
+            int genreNumber = 1;
+
+            Genre genreName = (Genre)genreNumber;
+            Console.WriteLine(genreName); 
+            //Console.WriteLine((Genre)genreNumber);
 
             #endregion
+
             // Pause screen execution
             Console.ReadLine();
         }
