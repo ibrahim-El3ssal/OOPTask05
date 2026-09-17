@@ -50,10 +50,26 @@ namespace OOP01Task05
 
             string genreText = "Science";
             Genre value = (Genre) Enum.Parse(typeof(Genre), genreText );
-            Console.WriteLine(value); 
+            Console.WriteLine(value);
 
             #endregion
 
+
+
+            #region Question05
+            /// -Given string genreText = "Mystery"; (not a valid Genre value), use 
+            /// Enum.TryParse() to attempt the conversion.  Print "Unknown genre"  if it  fails.
+            Console.WriteLine("\nQuestion05 : ");
+
+            string genreText2 = "Mystery";
+            object  result  ; 
+
+            if (!Enum.TryParse(typeof(Genre), genreText2, true, out result))
+            {
+                Console.WriteLine("Unknown genre"); 
+            }
+            
+            #endregion
             // Pause screen execution
             Console.ReadLine();
 
