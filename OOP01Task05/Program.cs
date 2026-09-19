@@ -54,8 +54,6 @@ namespace OOP01Task05
 
             #endregion
 
-
-
             #region Question05
             /// -Given string genreText = "Mystery"; (not a valid Genre value), use 
             /// Enum.TryParse() to attempt the conversion.  Print "Unknown genre"  if it  fails.
@@ -68,8 +66,39 @@ namespace OOP01Task05
             {
                 Console.WriteLine("Unknown genre"); 
             }
-            
             #endregion
+            
+            
+            #region Question06
+            Console.WriteLine("\nQuestion6 : ");
+            Console.WriteLine("\n OOP 01 - Smart Delivery Management System  :Theoretical Questions ");
+            Console.WriteLine("\nQuestion6 : ");
+            // Question01 : 
+            /// a)  What happens when a DeliveryAddress variable is copied into another variable and the copy is modified ?
+            //result a : When a DeliveryAddress variable is copied into another variable, a completely independent copy of the value is created in memory (Value Copy).
+            //Modifying the copied variable will NOT affect the original variable .
+
+
+            /// b)  What happens when a Customer variable is copied into another variable and one variable modifies the object 
+
+            // result B: 
+            //Both variables will point to the same object in the Heap. Therefore,
+            //modifying the object through either variable will affect the original object,
+            //and the changes will be reflected in both variables.   
+
+
+            //Question 02 : 
+            //Result A : Three problems with ( Encapsulation ):
+            //Anyone can modify data directly with invalid values.
+            //Renaming a field breaks all external code.
+            //Exposes internal implementation details.
+
+            //Result B :Private Fields with Properties
+            // Restricts direct access to internal fields.
+
+            #endregion
+
+
             // Pause screen execution
             Console.ReadLine();
 
