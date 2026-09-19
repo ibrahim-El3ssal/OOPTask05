@@ -1,35 +1,37 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO.Pipes;
-using System.Text;
 
 namespace OOP01Task05
 {
     internal struct Shipment
     {
-        private string TrackingCode; 
+        private string TrackingCode;
         private string Description;
         private double Weight;
-        private double DeliveryFee;
+        private decimal DeliveryFee;
         public DeliveryAddress Destination;
 
-        public Shipment(string trackingCode, string description, double weight, double deliveryFee, DeliveryAddress destination)
+        // 1. Main Constructor
+        public Shipment(string trackingCode, string description, double weight, decimal deliveryFee, DeliveryAddress destination)
         {
             TrackingCode = "UNKNOWN";
             Description = "N/A";
             Weight = 1.0;
-            DeliveryFee = 1.0;
+            DeliveryFee = 1.0m;
             Destination = destination;
 
-            SetTrackingCode(trackingCode)  ;
-            SetDescription(description) ;
-            SetWeight(weight) ;
-            SetDeliveryFee (deliveryFee) ;
+            SetTrackingCode(trackingCode);
+            SetDescription(description);
+            SetWeight(weight);
+            SetDeliveryFee(deliveryFee);
             SetDestination(destination);
         }
-        ///  override Constructor Shipment
-        public Shipment(string trackingCode) : this(trackingCode, "Unknown", 1.0, 50.0 , new DeliveryAddress()) { }
-      
+
+        // 2. Overloaded Constructor
+        public Shipment(string trackingCode)
+            : this(trackingCode, "Unknown", 1.0, 50.0m, new DeliveryAddress())
+        {
+        }
+
         // TrackingCode 
         public string GetTrackingCode()
         {
@@ -42,7 +44,8 @@ namespace OOP01Task05
                 TrackingCode = value;
             }
         }
-        //GetDescription
+
+        // Description
         public string GetDescription()
         {
             return Description;
@@ -54,7 +57,8 @@ namespace OOP01Task05
                 Description = value;
             }
         }
-        //Weight
+
+        // Weight
         public double GetWeight()
         {
             return Weight;
@@ -66,37 +70,49 @@ namespace OOP01Task05
                 Weight = value;
             }
         }
-        //DeliveryFee
-        public double GetDeliveryFee()
+
+        // DeliveryFee
+        public decimal GetDeliveryFee()
         {
             return DeliveryFee;
         }
-        private void SetDeliveryFee(double value)
+        private void SetDeliveryFee(decimal value)
         {
             if (value > 0)
             {
                 DeliveryFee = value;
             }
         }
-        //Destination
+
+        // Destination
         public DeliveryAddress GetDestination()
         {
             return Destination;
         }
-         public void SetDestination(DeliveryAddress value)
+        public void SetDestination(DeliveryAddress value)
         {
-                Destination = value;
+            Destination = value;
         }
 
         // EstimatedCost 
-
-        public double EstimatedCost ()
+        public decimal EstimatedCost()
         {
-            return ( DeliveryFee + (Weight * 5) )  ;
+            return DeliveryFee + (decimal)(Weight * 5);
         }
 
-        /// 
-      
-
+        // UpdateDeliveryFee
+        public void UpdateDeliveryFee(decimal newFee)
+        {
+            SetDeliveryFee(newFee);
+        }
+        //PrintShipment
+        public void PrintShipment()
+        {
+            Console.WriteLine($"Tracking Code: {TrackingCode}");
+            Console.WriteLine($"Description: {Description}");
+            Console.WriteLine($"Weight: {Weight} kg");
+            Console.WriteLine($"Delivery Fee: {DeliveryFee:C}");
+            Console.WriteLine($"Estimated Cost: {EstimatedCost():C}");
+        }
     }
 }
