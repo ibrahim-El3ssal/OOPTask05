@@ -72,7 +72,6 @@ namespace OOP01Task05
             #region Question06
             Console.WriteLine("\nQuestion6 : ");
             Console.WriteLine("\n OOP 01 - Smart Delivery Management System  :Theoretical Questions ");
-            Console.WriteLine("\nQuestion6 : ");
             // Question01 : 
             /// a)  What happens when a DeliveryAddress variable is copied into another variable and the copy is modified ?
             //result a : When a DeliveryAddress variable is copied into another variable, a completely independent copy of the value is created in memory (Value Copy).
@@ -98,7 +97,23 @@ namespace OOP01Task05
 
             #endregion
 
+            #region Question07
+            Console.WriteLine("\nQuestion7 : ");
 
+            DeliveryAddress D01 = new DeliveryAddress("Giza" , "Orabi" , 1 );
+
+            DeliveryAddress D02 = D01;
+            Console.WriteLine($"before (D01): {D01.GetFullAddress()}");
+
+            D02.City = "Alexandria";
+            D02.BuildingNumber = 25;
+
+            Console.WriteLine($" after(D01): {D01.GetFullAddress()}");
+            Console.WriteLine($" (D02): {D02.GetFullAddress()}");
+
+            #endregion
+
+          
             // Pause screen execution
             Console.ReadLine();
 
