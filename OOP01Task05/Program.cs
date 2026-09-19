@@ -117,6 +117,11 @@ namespace OOP01Task05
             /// 2.Ceate a Shipment struct 
             /// 
             #endregion
+
+            #region Question09
+            /// 3.Add constructor overloading to Shipment:
+            
+            #endregion
             // Pause screen execution
             Console.ReadLine();
 

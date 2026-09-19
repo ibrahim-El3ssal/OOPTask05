@@ -26,8 +26,10 @@ namespace OOP01Task05
             SetWeight(weight) ;
             SetDeliveryFee (deliveryFee) ;
             SetDestination(destination);
-
         }
+        ///  override Constructor Shipment
+        public Shipment(string trackingCode) : this(trackingCode, "Unknown", 1.0, 50.0 , new DeliveryAddress()) { }
+      
         // TrackingCode 
         public string GetTrackingCode()
         {
@@ -92,6 +94,9 @@ namespace OOP01Task05
         {
             return ( DeliveryFee + (Weight * 5) )  ;
         }
+
+        /// 
+      
 
     }
 }
