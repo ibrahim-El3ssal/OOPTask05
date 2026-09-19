@@ -113,7 +113,10 @@ namespace OOP01Task05
 
             #endregion
 
-          
+            #region Question08
+            /// 2.Ceate a Shipment struct 
+            /// 
+            #endregion
             // Pause screen execution
             Console.ReadLine();
 
